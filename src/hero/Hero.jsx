@@ -13,3 +13,10 @@ const Hero = () => {
 };
 
 export default Hero;
+
+{
+  /* <section className="hero">
+<img src={heroBg} className="background" alt="forest parallax" />
+<img src={heroFg} className="foreground" alt="forest parallax" />
+</section> */
+}
