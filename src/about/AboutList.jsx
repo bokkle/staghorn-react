@@ -2,7 +2,7 @@ import { aboutUs } from '../constants';
 
 const AboutList = () => {
   return (
-    <div className="mt-3">
+    <div className="mt-8">
       <ul className="">
         {aboutUs.map((point) => (
           <div key={point} className="flex items-start p-1">
