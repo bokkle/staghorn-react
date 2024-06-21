@@ -7,6 +7,9 @@ import galleryTwo from '../assets/staghorn-work-sq2.png';
 import galleryThree from '../assets/staghorn-work-sq3.png';
 import galleryFour from '../assets/staghorn-work-sq4.png';
 import galleryFive from '../assets/staghorn-work-sq5.png';
+import benny from '../assets/testimonial-m-2.png';
+import jessica from '../assets/testimonial-f-2.png';
+import anna from '../assets/testimonial-f-1.png';
 
 const navLinks = ['about', 'services', 'contact'];
 
@@ -72,21 +75,21 @@ const testimonials = [
     review:
       'Matt pulled up on short notice... saved my garage from being crushed by a tree',
     location: 'Pembroke, ON',
-    image: '',
+    image: benny,
   },
   {
     name: 'Anna V.',
     review:
       "I felt claustrophobic in my backyard, it was so overgrown you've transformed it into a sanctuary :)",
     location: 'Petawawa, ON',
-    image: '',
+    image: anna,
   },
   {
     name: 'Jessica C.',
     review:
       'The Staghorn team was friendly, fast, and great prices too. Thanks guys!',
     location: 'Pembroke, ON',
-    image: '',
+    image: jessica,
   },
 ];
 
