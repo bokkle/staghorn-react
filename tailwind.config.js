@@ -11,6 +11,15 @@ export default {
         'z-8': '2rem',
         'z-16': '4rem',
       },
+      keyframes: {
+        moveLeftRight: {
+          '0%, 100%': {transform: 'translateX(-10%)'},
+          '50%': {transform: 'translateX(-150%)'}
+        }
+      },
+      animation: {
+        moveLeftRight: 'moveLeftRight 10s infinite ease-in-out'
+      }
     },
   },
   plugins: [],

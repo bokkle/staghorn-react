@@ -21,7 +21,7 @@ const ServicesCard = ({ title, info, image }) => {
 
 const Services = () => {
   return (
-    <section className="flex justify-center bg-neutral-900 px-2 py-28">
+    <section className="flex justify-center bg-neutral-800 px-2 py-28">
       <div className="max-w-screen-2xl">
         <div className="">
           <h1 className="mb-7 ml-2 text-3xl font-bold tracking-wide text-neutral-100 lg:text-5xl">
