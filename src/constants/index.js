@@ -93,4 +93,23 @@ const testimonials = [
   },
 ];
 
-export { navLinks, aboutUs, services, gallery, testimonials };
+const footerMenu = [
+  {
+    name: 'home',
+    href: '#',
+  },
+  {
+    name: 'about',
+    href: '#about',
+  },
+  {
+    name: 'services',
+    href: '#services',
+  },
+  {
+    name: 'contact',
+    href: '#contact',
+  },
+];
+
+export { navLinks, aboutUs, services, gallery, testimonials, footerMenu };
