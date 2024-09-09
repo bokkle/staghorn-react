@@ -1,27 +1,26 @@
-import Navigation from './nav/Navigation';
-import Hero from './hero/Hero';
-import About from './about/About';
-import Services from './services/Services';
-import Gallery from './gallery/Gallery';
-import Contact from './contact/Contact';
-import Testimonials from './testimonials/Testimonials';
-import Footer from './footer/Footer';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import AppLayout from './ui/AppLayout';
+import Home from './components/home/Home';
+import PageNotFound from './components/pagenotfound/PageNotFound';
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+    ],
+  },
+  {
+    path: '*',
+    element: <PageNotFound />,
+  },
+]);
 
 function App() {
-  return (
-    <div className="w-screen">
-      <Navigation />
-      <div id="parallax-container">
-        <Hero />
-        <About />
-        <Services />
-        <Gallery />
-        <Testimonials />
-        <Contact />
-        <Footer />
-      </div>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
