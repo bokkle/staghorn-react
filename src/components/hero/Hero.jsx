@@ -1,15 +1,17 @@
 import treeHero from '../../assets/treeHero.png';
+import Fireflies from './Fireflies';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen">
+    <section id="home" className="relative h-screen overflow-hidden">
       <img
         src={treeHero}
-        className="pointer-events-none absolute z-[-1] h-full select-none object-cover"
-        alt=""
+        className="pointer-events-none absolute z-[-1] min-h-full min-w-full select-none object-cover"
+        alt="closeup of tree branches and leaves"
       />
-      <div className="pointer-events-none absolute z-[-1] h-full w-full select-none bg-slate-950/40" />
-      <div className="z-0 flex h-full flex-col items-center justify-center">
+      <div className="pointer-events-none absolute z-[-1] h-full w-full select-none bg-zinc-950/50" />
+      <Fireflies />
+      <div className="flex h-full flex-col items-center justify-center">
         <h1
           className="text-center text-5xl font-bold capitalize tracking-wide text-white md:text-7xl lg:text-8xl"
           style={{ textShadow: '0 0 2px black' }}
@@ -21,7 +23,7 @@ const Hero = () => {
           className="mt-4 text-center text-lg font-semibold text-slate-50 md:text-2xl"
           style={{ textShadow: '0 0 5px black' }}
         >
-          Tree Removal, Trimming, Pruning, and More
+          Tree Removal, Trimming, Planting, and More
         </h2>
         <div className="mt-6 grid w-[280px] gap-5 md:w-[500px] md:grid-cols-2">
           <button
