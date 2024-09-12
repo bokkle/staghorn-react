@@ -10,7 +10,7 @@ const Contact = () => {
     >
       <div className="mx-auto w-full max-w-screen-xl">
         <Heading heading="Contact" subheading="Need an arborist?" />
-        <div className="mt-6 grid divide-x border md:grid-cols-2">
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
           <ContactForm />
           <ContactImg />
         </div>
