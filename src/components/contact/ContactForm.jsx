@@ -1,45 +1,65 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { RiMessage2Line } from 'react-icons/ri';
-import { HiOutlineDevicePhoneMobile } from 'react-icons/hi2';
-import { GoMail } from 'react-icons/go';
-import { LuPhone, LuMail } from 'react-icons/lu';
+import toast from 'react-hot-toast';
+import ContactInfo from './ContactInfo';
 
 const ContactForm = () => {
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const userID = import.meta.env.VITE_EMAILJS_USER_ID;
+
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     message: '',
   });
+
+  const message = {
+    message: `user: ${formData.user_name}
+    email: ${formData.user_email}
+    message: ${formData.message}`,
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    emailjs
-      .send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        formData,
-        'YOUR_USER_ID', // Replace with your EmailJS user ID
-      )
-      .then(
-        (result) => {
-          console.log('Email successfully sent:', result.text);
-          alert('Message sent successfully!');
+    try {
+      setIsLoading(true);
+      const result = await emailjs.send(serviceID, templateID, message, userID);
+      console.log('Email successfully sent:', result.text);
+      toast.success('Message sent! Looking forward to speaking with you.', {
+        style: {
+          fontSize: '22px',
+          marginTop: '50px',
+          background: 'rgb(167, 243, 208)',
+          color: 'black',
+          fontSmooth: 'antialiased',
         },
-        (error) => {
-          console.error('There was an error sending the email:', error.text);
-          alert('Failed to send message. Please try again.');
+        duration: 8000,
+      });
+      setFormData({ user_name: '', user_email: '', message: '' });
+    } catch (err) {
+      console.error('There was an error sending the email:', err.text);
+      toast.error('Failed to send. Please use a different contact method.', {
+        style: {
+          fontSize: '22px',
+          marginTop: '50px',
+          background: 'rgb(254, 205, 211)',
+          color: 'black',
+          fontSmooth: 'antialiased',
         },
-      );
-    setFormData({ name: '', email: '', message: '' }); // Clear form after submission
+        duration: 8000,
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
-
   return (
     <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-4 md:p-6 lg:p-10">
       <h3 className="text-xl font-semibold text-zinc-200 md:text-2xl">
@@ -51,43 +71,43 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-8">
         <div className="flex flex-col">
           <label
-            htmlFor="name"
+            htmlFor="user_name"
             className="text-sm font-semibold capitalize text-zinc-50 md:text-base"
           >
             name:
           </label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            placeholder="What's your name?"
+            id="user_name"
+            name="user_name"
+            value={formData.user_name}
+            placeholder="Enter your name"
             onChange={handleChange}
-            className="mt-1 border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
+            className="mt-1 rounded-md border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
             required
           />
         </div>
         <div className="flex flex-col">
           <label
-            htmlFor="name"
+            htmlFor="user_email"
             className="text-sm font-semibold capitalize text-zinc-50 md:text-base"
           >
             email:
           </label>
           <input
             type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            placeholder="What's your email?"
+            id="user_email"
+            name="user_email"
+            value={formData.user_email}
+            placeholder="Enter your email"
             onChange={handleChange}
-            className="mt-1 border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
+            className="mt-1 rounded-md border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
             required
           />
         </div>
         <div className="flex flex-col">
           <label
-            htmlFor="name"
+            htmlFor="message"
             className="text-sm font-semibold capitalize text-zinc-50 md:text-base"
           >
             message:
@@ -98,37 +118,25 @@ const ContactForm = () => {
             name="message"
             rows={3}
             value={formData.message}
-            placeholder="How can we help?"
+            placeholder="Let us know how we can help"
             onChange={handleChange}
-            className="mt-1 resize-none border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
+            className="mt-1 resize-none rounded-md border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
             required
           />
         </div>
         <button
           type="submit"
-          className="mx-auto mt-4 w-full max-w-[300px] p-2 font-bold uppercase text-slate-100 ring ring-emerald-400 hover:bg-emerald-400"
+          className="mx-auto mt-4 w-full max-w-[300px] select-none bg-emerald-600 p-2 font-bold uppercase text-slate-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-700 hover:ring-emerald-700 md:text-xl"
           style={{ textShadow: '0 0 3px black' }}
         >
-          send
+          {isLoading ? (
+            <span className="animate-pulse">sending...</span>
+          ) : (
+            <span>send</span>
+          )}
         </button>
       </form>
-      <div className="mt-10 flex items-center justify-between">
-        <div className="h-[2px] w-1/3 bg-slate-500"></div>
-        <p className="capitalize text-slate-500">or</p>
-        <div className="h-[2px] w-1/3 bg-slate-500"></div>
-      </div>
-      <div className="mt-6 flex flex-col gap-4">
-        <div className="flex items-center gap-2">
-          <LuPhone className="text-2xl text-emerald-400 md:text-3xl" />
-          <p className="text-slate-100 sm:text-lg md:text-xl">416-270-6681</p>
-        </div>
-        <div className="flex items-center gap-2">
-          <LuMail className="text-2xl text-emerald-400 md:text-3xl" />
-          <p className="text-slate-100 sm:text-lg md:text-xl">
-            staghorn.treeservices@gmail.com
-          </p>
-        </div>
-      </div>
+      <ContactInfo />
     </div>
   );
 };

@@ -1,17 +1,11 @@
-import { useState } from 'react';
-
 const ServicesCard = ({ index, title, info, image, alt }) => {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <div
-      className={`flex flex-col-reverse ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}
+      className={`flex flex-col-reverse ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} group`}
     >
       <div className="flex flex-col items-center justify-center p-8 md:w-1/2">
         <h3
-          className={`text-2xl font-semibold capitalize text-slate-100 md:text-3xl lg:text-5xl ${hovered && 'text-emerald-600 text-opacity-100'} transition-colors duration-500 ease-out will-change-auto`}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          className={`text-2xl font-semibold capitalize text-slate-100 text-opacity-100 transition-colors duration-500 ease-out will-change-auto group-hover:text-emerald-600 md:text-3xl lg:text-5xl`}
         >
           {title}
         </h3>
@@ -20,13 +14,11 @@ const ServicesCard = ({ index, title, info, image, alt }) => {
         </p>
       </div>
       <div className="flex items-center justify-center overflow-hidden p-8 md:w-1/2">
-        <div className="overflow-hidden rounded-full border-[5px] border-emerald-600">
+        <div className="overflow-hidden rounded-full">
           <img
             src={image}
-            className={`w-full max-w-[450px] rounded-full transition-transform duration-500 ${hovered && 'scale-105'} will-change-transform`}
+            className={`w-full max-w-[450px] rounded-full transition-transform duration-500 will-change-transform hover:scale-105 group-hover:scale-110`}
             alt={alt}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
           />
         </div>
       </div>

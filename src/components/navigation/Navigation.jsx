@@ -4,23 +4,21 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Nav from './Nav';
 import { useState } from 'react';
 import { navItems } from '../../constants';
-import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   return (
-    <header className="fixed z-30 h-16 w-screen bg-slate-950/50 backdrop-blur-sm">
+    <header className="fixed z-30 h-16 w-screen bg-zinc-950/50 backdrop-blur-md md:h-20">
       <div className="mx-auto flex h-full w-full max-w-screen-xl items-center justify-between">
-        <Link to={'/'}>
+        <a href="#home">
           <h1
-            className="ml-4 text-base font-bold uppercase text-slate-50 md:text-lg lg:text-xl"
+            className="ml-4 text-lg font-bold uppercase text-slate-50 lg:text-2xl"
             onClick={() => setIsOpen(false)}
           >
             staghorn
           </h1>
-        </Link>
+        </a>
 
         {/* Mobile Menu Icon */}
         <nav className="mr-4 text-slate-50">
@@ -42,7 +40,7 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <nav
-        className={`absolute right-0 top-16 w-1/2 overflow-hidden rounded-bl-xl border-emerald-400 bg-gradient-to-bl from-slate-950/95 via-slate-900/95 to-slate-800/95 md:hidden ${isOpen ? 'max-h-[192px] border-b border-l p-4' : 'max-h-0'} transition-all duration-300 ease-out`}
+        className={`absolute right-0 top-16 mt-[-1px] w-1/2 overflow-hidden rounded-bl-xl border-zinc-400 bg-gradient-to-bl from-zinc-950/95 via-zinc-900/95 to-zinc-800/95 md:hidden ${isOpen ? 'max-h-[192px] border-b border-l p-4' : 'max-h-0'} transition-all duration-300 ease-out`}
       >
         <ul className="flex flex-col items-end gap-4">
           {navItems.map((link) => (

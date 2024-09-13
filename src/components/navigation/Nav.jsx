@@ -1,18 +1,13 @@
+import { navItems } from '../../constants';
+
 const Nav = () => {
   return (
     <ul className="hidden gap-8 md:flex">
-      <a href="#about">
-        <li className="text-xl">About</li>
-      </a>
-      <a href="#services">
-        <li className="text-xl">Services</li>
-      </a>
-      <a href="#reviews">
-        <li className="text-xl">Reviews</li>
-      </a>
-      <a href="#contact">
-        <li className="text-xl">Contact</li>
-      </a>
+      {navItems.map((link) => (
+        <a key={link.link} href={link.link}>
+          <li className='capitalize text-xl hover:text-emerald-400'>{link.title}</li>
+        </a>
+      ))}
     </ul>
   );
 };

@@ -27,16 +27,20 @@ const Hero = () => {
         </h2>
         <div className="mt-6 grid w-[280px] gap-5 md:w-[500px] md:grid-cols-2">
           <button
-            className="cursor-pointer bg-emerald-600 p-3 font-semibold capitalize text-slate-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-800 hover:ring-emerald-800"
+            className="cursor-pointer bg-emerald-600 font-semibold text-slate-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-800 hover:ring-emerald-800 md:text-xl"
             style={{ textShadow: '0 0 2px black' }}
           >
-            get a free quote
+            <a href="#contact" className="block h-full w-full p-3">
+              Get a Free Quote
+            </a>
           </button>
           <button
-            className="cursor-pointer p-3 font-semibold capitalize text-slate-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-800 hover:ring-emerald-800"
+            className="cursor-pointer font-semibold capitalize text-slate-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-800 hover:ring-emerald-800 md:text-xl"
             style={{ textShadow: '0 0 2px black' }}
           >
-            learn more
+            <a href="#about" className="block h-full w-full p-3">
+              learn more
+            </a>
           </button>
         </div>
       </div>
