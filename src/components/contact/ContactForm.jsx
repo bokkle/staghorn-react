@@ -60,15 +60,19 @@ const ContactForm = () => {
       setIsLoading(false);
     }
   };
+
   return (
     <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-4 md:p-6 lg:p-10">
-      <h3 className="text-xl font-semibold text-zinc-200 md:text-2xl">
+      <h4 className="text-xl font-semibold text-zinc-200 md:text-2xl">
         Let&apos;s have a chat!
-      </h3>
-      <h3 className="text-zinc-300 md:text-lg">
+      </h4>
+      <p className="text-zinc-300 md:text-lg">
         We&apos;re currently available for booking.
-      </h3>
-      <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-8">
+      </p>
+      <form
+        onSubmit={handleSubmit}
+        className="mt-8 flex select-none flex-col gap-8"
+      >
         <div className="flex flex-col">
           <label
             htmlFor="user_name"
@@ -126,7 +130,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="mx-auto mt-4 w-full max-w-[300px] select-none bg-emerald-600 p-2 font-bold uppercase text-slate-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-700 hover:ring-emerald-700 md:text-xl"
+          className="mx-auto mt-4 w-full max-w-[300px] select-none bg-emerald-600 p-3 font-sans font-bold uppercase text-zinc-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-700 hover:ring-emerald-700 active:scale-95 md:text-xl"
           style={{ textShadow: '0 0 3px black' }}
         >
           {isLoading ? (

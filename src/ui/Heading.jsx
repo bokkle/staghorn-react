@@ -10,10 +10,10 @@ const Heading = ({ heading, subheading }) => {
           {']'}
         </span>
       </h2>
-      <h1 className="text-5xl font-bold capitalize text-slate-100 md:text-6xl lg:text-7xl">
+      <h3 className="text-5xl font-bold capitalize text-slate-100 md:text-6xl lg:text-7xl">
         {heading}
         <span className="animate-pulse text-emerald-400">.</span>
-      </h1>
+      </h3>
     </>
   );
 };

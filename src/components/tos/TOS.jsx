@@ -1,6 +1,7 @@
 import { tos } from '../../constants';
 import ReturnHome from '../../ui/ReturnHome';
 import ScrollToTop from '../../ui/ScrollToTop';
+import TOSCard from './TOSCard';
 
 const TOS = () => {
   return (
@@ -8,23 +9,17 @@ const TOS = () => {
       <ScrollToTop />
       <div className="mx-auto flex w-full max-w-3xl flex-col gap-6">
         <h1 className="mb-6 text-center text-4xl font-bold uppercase text-zinc-50">
-          staghorn
+          staghorn <br /> terms of <br className="sm:hidden" /> service
         </h1>
         <ReturnHome />
         {tos.map((info, i, arr) => (
-          <div
-            key={info.title}
-            className={`flex flex-col gap-2 ${i < arr.length - 1 && 'border-b border-zinc-600'} pb-6`}
-          >
-            <h2 className="text-2xl font-semibold text-emerald-400">
-              {info.title}
-            </h2>
-            {info.description.map((para, i) => (
-              <p key={i} className="text-zinc-50">
-                {para}
-              </p>
-            ))}
-          </div>
+          <TOSCard
+            key={i}
+            index={i}
+            title={info.title}
+            arr={arr}
+            description={info.description}
+          />
         ))}
         <ReturnHome />
       </div>

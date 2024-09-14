@@ -3,7 +3,9 @@ import { RiFacebookBoxLine, RiInstagramLine } from 'react-icons/ri';
 const FooterConnect = () => {
   return (
     <div className="flex flex-col gap-3 border-b border-zinc-700 pb-4 md:border-none">
-      <h2 className="text-xl font-semibold capitalize text-zinc-50">connect</h2>
+      <h4 className="select-none text-xl font-semibold capitalize text-zinc-50">
+        connect
+      </h4>
       <div className="flex gap-3">
         <a
           href="https://www.facebook.com/people/Staghorn-Tree-Service/100095581361451/"

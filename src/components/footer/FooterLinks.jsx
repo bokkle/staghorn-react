@@ -1,20 +1,17 @@
-import { navItems } from '../../constants';
-import { Link } from 'react-router-dom';
+import { navItems, policyLinks } from '../../constants';
+import FooterNavLink from './FooterNavLink';
+import FooterPolicyLinks from './FooterPolicyLinks';
 
 const FooterLinks = () => {
   return (
-    <div className="my-6 grid grid-cols-2 md:my-0">
+    <div className="my-6 grid select-none grid-cols-2 md:my-0">
       <div>
         <h2 className="text-xl font-semibold capitalize text-zinc-50">
           sitemap
         </h2>
         <ul>
-          {navItems.map((link) => (
-            <a key={link.title} href={link.link}>
-              <li className="text-lg capitalize text-zinc-300 hover:text-emerald-400">
-                {link.title}
-              </li>
-            </a>
+          {navItems.map((link, i) => (
+            <FooterNavLink key={i} title={link.title} link={link.link} />
           ))}
         </ul>
       </div>
@@ -23,16 +20,9 @@ const FooterLinks = () => {
           policies
         </h2>
         <ul>
-          <Link to="privacy-policy">
-            <li className="text-lg text-zinc-300 hover:text-emerald-400">
-              Privacy Policy
-            </li>
-          </Link>
-          <Link to="tos">
-            <li className="text-lg text-zinc-300 hover:text-emerald-400">
-              Terms of Service
-            </li>
-          </Link>
+          {policyLinks.map((link, i) => (
+            <FooterPolicyLinks key={i} link={link.link} title={link.title} />
+          ))}
         </ul>
       </div>
     </div>

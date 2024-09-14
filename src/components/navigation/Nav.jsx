@@ -1,12 +1,11 @@
 import { navItems } from '../../constants';
+import DesktopNavLink from './DesktopNavLink';
 
 const Nav = () => {
   return (
-    <ul className="hidden gap-8 md:flex">
-      {navItems.map((link) => (
-        <a key={link.link} href={link.link}>
-          <li className='capitalize text-xl hover:text-emerald-400'>{link.title}</li>
-        </a>
+    <ul className="mr-4 hidden gap-8 md:flex">
+      {navItems.map((link, i) => (
+        <DesktopNavLink key={i} link={link.link} title={link.title} />
       ))}
     </ul>
   );

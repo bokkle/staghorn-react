@@ -12,9 +12,9 @@ const AboutCard = ({ title, Icon, description }) => {
       <div className="flex justify-center text-6xl md:text-7xl">
         <Icon className="text-emerald-600" />
       </div>
-      <h3 className="mt-4 text-center text-xl font-semibold capitalize tracking-wide text-slate-100 transition-all duration-300 ease-out group-hover:text-emerald-400 md:text-2xl">
+      <h4 className="mt-4 text-center text-xl font-semibold capitalize tracking-wide text-zinc-100 transition-all duration-300 ease-out group-hover:text-emerald-400 md:text-2xl">
         {title}
-      </h3>
+      </h4>
       <p className="mt-2 text-zinc-200 group-hover:text-zinc-50 lg:text-lg">
         {description}
       </p>

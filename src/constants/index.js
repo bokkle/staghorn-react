@@ -19,6 +19,10 @@ import colton from '../assets/coltonIcon.png';
 import anna from '../assets/annaIcon.png';
 import benny from '../assets/iconBenny.png';
 
+//contact
+import { LuPhone, LuMail } from 'react-icons/lu';
+import { MdOutlineSms } from 'react-icons/md';
+
 const navItems = [
   {
     title: 'about',
@@ -66,7 +70,7 @@ const aboutUs = [
     icon: PiHardHatThin,
   },
   {
-    title: 'best price',
+    title: 'best prices',
     description:
       "You'll recieve an efficient, premium service for the best price, that's our guarantee",
     icon: PiMoneyWavyThin,
@@ -78,25 +82,25 @@ const services = [
     title: 'tree removal',
     info: 'Assess, remove and dispose of trees; safely and efficiently',
     image: galleryThree,
-    alt: 'An arborist using a chainsaw to cut down a tree',
+    alt: 'An arborist using a chainsaw to cut down and remove a tree',
   },
   {
     title: 'tree pruning',
     info: 'Promote healthier growth, enhance aesthetics, and ensure the safety of surrounding structures',
     image: pruning,
-    alt: 'A tree being pruned',
+    alt: 'A tree being professionally pruned',
   },
   {
     title: 'planting',
     info: 'Expert garden and tree planting, creating beautiful and sustainable landscapes that breathe life into your surroundings',
     image: planting,
-    alt: 'gardening equipment and a freshly planted tree',
+    alt: 'gardening equipment and a freshly planted tree, showcasing our gardening and planting services',
   },
   {
     title: 'emergency services',
     info: 'Immediate, professional assistance in swiftly and safely removing hazardous trees',
     image: galleryFive,
-    alt: 'one of our arborists at work, in a tree',
+    alt: 'one of our arborists at work, removing a tree',
   },
 ];
 
@@ -118,7 +122,7 @@ const testimonials = [
       "We couldn't be happier with their service!",
       '-Benny',
     ],
-    class: 'md:row-span-2',
+    class: 'row-span-2',
     numStars: 5,
     img: benny,
   },
@@ -135,19 +139,38 @@ const testimonials = [
     name: 'liam t.',
     location: 'Deep River, ON',
     quote: [
-      "My father is older and can't take care of his property like he used to, there were a ton of trees that were growing into power lines near his house, Matthew came by and fixed the issue. He was professional and did spectacular work, thanks.",
+      "My father can't take care of his property like he used to. There were a ton of trees that were growing into power lines near his house, Matthew came by and fixed the issue. He was professional and did spectacular work, thanks.",
     ],
     numStars: 5,
     img: liam,
   },
   {
-    name: 'darlene r.',
+    name: 'Jessica C.',
     location: 'Arnprior, ON',
     quote: [
       'I felt claustrophobic in my backyard, everything was so overgrown. You turned it into a sanctuary. I am very happy that I found out about you.',
     ],
     numStars: 5,
     img: darlene,
+  },
+];
+
+const contactLinks = [
+  {
+    title: 'Text us',
+    icon: MdOutlineSms,
+    link: 'sms:+4162706681?body=Hey Staghorn, ',
+  },
+  {
+    title: 'Call us',
+    icon: LuPhone,
+    link: 'tel:+4162706681',
+  },
+  {
+    title: 'Email us',
+    icon: LuMail,
+    link: 'mailto:staghorn.treeservices@gmail.com',
+    styling: 'col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1',
   },
 ];
 
@@ -299,12 +322,25 @@ const tos = [
   },
 ];
 
+const policyLinks = [
+  {
+    title: 'Privacy Policy',
+    link: 'privacy-policy',
+  },
+  {
+    title: 'Terms of Service',
+    link: 'tos',
+  },
+];
+
 export {
   navItems,
   serviceAreas,
   aboutUs,
   services,
   testimonials,
+  contactLinks,
   privacy,
   tos,
+  policyLinks,
 };

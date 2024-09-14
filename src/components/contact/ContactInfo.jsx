@@ -1,30 +1,34 @@
-import { LuPhone, LuMail } from 'react-icons/lu';
-import { MdOutlineSms } from 'react-icons/md';
+import { contactLinks } from '../../constants';
 
 const ContactInfo = () => {
   return (
     <>
-      <div className="mt-10 flex items-center justify-between">
+      <div className="mt-10 flex select-none items-center justify-between">
         <div className="h-[2px] w-1/3 bg-slate-500"></div>
         <p className="capitalize text-slate-500">or</p>
         <div className="h-[2px] w-1/3 bg-slate-500"></div>
       </div>
-      <div className="mt-6 flex flex-col gap-4">
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex items-center gap-4">
-            <LuPhone className="text-4xl text-emerald-400" />
-            <div className="h-[30px] w-[1px] bg-zinc-500" />
-            <MdOutlineSms className="text-4xl text-emerald-400" />
+      <div className="mt-6 grid select-none grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+        {contactLinks.map((link) => (
+          <div
+            key={link.title}
+            className={`flex items-center justify-center ${link.styling && link.styling}`}
+          >
+            <a href={link.link}>
+              <button
+                className="flex size-24 flex-col items-center justify-center gap-1 rounded-full bg-gradient-to-br from-emerald-800 via-emerald-900 to-emerald-950 text-lg text-zinc-100 ring-emerald-600 transition-all duration-300 ease-out hover:ring active:scale-95 lg:size-32 lg:gap-2 lg:text-xl"
+                style={{ textShadow: '0 0 3px black' }}
+              >
+                {link.title}
+                <link.icon className="text-xl text-zinc-100 lg:text-2xl" />
+              </button>
+            </a>
           </div>
-          <p className="text-slate-100 sm:text-lg md:text-xl">416-270-6681</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <LuMail className="text-4xl text-emerald-400" />
-          <p className="text-slate-100 sm:text-lg md:text-xl">
-            staghorn.treeservices@gmail.com
-          </p>
-        </div>
+        ))}
       </div>
+      <hr className="mt-6 border-zinc-700" />
+      <p className="mt-4 text-sm text-zinc-400">416-270-6681</p>
+      <p className="text-sm text-zinc-400">staghorn.treeservices@gmail.com</p>
     </>
   );
 };

@@ -6,163 +6,36 @@ html {
   scroll-behavior: smooth;
 }
 
-/* hero  */
-
-#parallax-container {
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  perspective: 10px;
-  scroll-behavior: smooth;
+::selection {
+  background-color: rgb(52 211 153);
+  color: rgb(9 9 11);
 }
 
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
+input:-webkit-autofill {
+  background-color: #1f2937 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-.background,
-.foreground {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
+input:-webkit-autofill::first-line {
+  color: #fff;
 }
 
-.background {
-  position: absolute;
-  transform: translateZ(-10px) scale(2.1);
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    rgb(52 211 153),
+    rgb(16 185 129),
+    rgb(5 150 105)
+  );
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari, etc.) */
+  background-clip: text; /* Standard property for future compatibility */
+  -webkit-text-fill-color: transparent; /* For WebKit browsers */
 }
 
-.parallax-logo {
-  border-radius: 50%;
-  padding: 10px;
-  transform: translateZ(-7px) scale(1.8);
-  position: absolute;
-  top: 90px;
-  filter: brightness(1.4) contrast(1.4);
-}
+/* fireflies */
 
-.foreground img {
-  position: absolute;
-  transform: translateZ(-5px) scale(1.5);
-}
-
-/* BUTTON  */
-
-.button__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.form__submit {
-  padding: 20px 60px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  position: relative;
-  transition: 500ms;
-  cursor: pointer;
-}
-
-.form__submit span {
-  color: ghostwhite;
-  position: relative;
-  transition: 500ms;
-  transition-delay: 500ms;
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 600;
-}
-
-.form__submit::before {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 0%;
-  left: 50%;
-  right: 50%;
-  top: 50%;
-  bottom: 50%;
-  transition: 500ms;
-  transition-delay: 500ms;
-  background-color: #33ff00;
-  box-shadow:
-    0 0 10px #33ff00,
-    0 0 30px #33ff00,
-    0 0 50px #33ff00;
-}
-
-.form__submit div {
-  transition: 500ms;
-  position: absolute;
-  background-color: #33ff00;
-  box-shadow:
-    0 0 15px #33ff00,
-    0 0 30px #33ff00,
-    0 0 50px #33ff00;
-}
-
-.form__submit .top {
-  width: 15px;
-  height: 2px;
-  top: 0;
-  left: 0;
-}
-
-.form__submit .bottom {
-  width: 15px;
-  height: 2px;
-  bottom: 0;
-  right: 0;
-}
-
-.form__submit .left {
-  width: 2px;
-  height: 15px;
-  top: 0;
-  left: 0;
-}
-
-.form__submit .right {
-  width: 2px;
-  height: 15px;
-  bottom: 0;
-  right: 0;
-}
-
-.form__submit:hover span {
-  color: ghostwhite;
-}
-
-.form__submit:hover::before {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.form__submit:hover .top,
-.form__submit:hover .bottom {
-  width: 100%;
-}
-
-.form__submit:hover .left,
-.form__submit:hover .right {
-  height: 100%;
-}
-
-/* firefly */
 .firefly {
   position: absolute;
   left: 50%;
