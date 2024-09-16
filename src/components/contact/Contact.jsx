@@ -9,6 +9,15 @@ const Contact = () => {
       <div className="mx-auto w-full max-w-screen-xl">
         <Fade fraction={0.1} cascade triggerOnce>
           <Heading heading="Contact" subheading="Need an arborist?" />
+          <p className="mt-2 max-w-3xl text-zinc-300 lg:text-lg xl:text-2xl">
+            Get in touch with us for expert tree care in the{' '}
+            <strong className="font-semibold capitalize text-emerald-400">
+              ottawa valley
+            </strong>
+            . You can email us through the contact form below, or select another
+            contact method. We&apos;re currently offering{' '}
+            <em className="text-emerald-400">free estimates</em>.
+          </p>
         </Fade>
         <div className="mt-6 grid gap-4 lg:grid-cols-2">
           <Slide triggerOnce duration={2000}>

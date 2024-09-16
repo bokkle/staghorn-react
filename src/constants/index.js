@@ -174,6 +174,97 @@ const contactLinks = [
   },
 ];
 
+const faq = [
+  {
+    question: 'What is an Arborist?',
+    answer: [
+      "It's a general term for anyone who specializes in tree care or tree services.",
+    ],
+  },
+  {
+    question: 'What is an ISA Certified Arborist?',
+    answer: [
+      'At Staghorn, we are ISA Certified Arborists. We have successfully completed formal education (specifically, at Algonquin College) in Arboriculture.',
+      'To earn the ISA credential, an Arborist must be trained and knowledgeable in all aspects of arboriculture. This strengthens our credibility and reliability in the field so we can properly serve your needs.',
+    ],
+  },
+  {
+    question: 'Is Staghorn fully licensed and insured?',
+    answer: [
+      'Yes. We are committed to safe work practices, quality customer service, and are fully licensed and insured.',
+    ],
+  },
+  {
+    question: 'How can you tell if a sick tree can be saved?',
+    answer: [
+      "It's best to contact us and schedule a time for a certified arborist to visit your property.",
+    ],
+  },
+  {
+    question: 'Which services do you offer?',
+    answer: [
+      'Tree removal, pruning, planting, stump grinding, plant health care, deep root feedings, emerald ash borer treatments, and emergency services.',
+      '• Tree Removal — We have all of the tools required to aid us in the removal of trees.',
+      '• Pruning — We provide an excellent tree pruning service to protect your trees and property. Our experienced team uses best practices, and we carry out the pruning in such a way that the natural beauty of your property is not only preserved but enhanced.',
+      '• Planting — Whether you need trees, shrubs, or even expert garden planting, we have you covered. We use best management practices such as proper hole depth and width, backfilling, staking, and mulching. We help ensure planting success by applying a root-stimulating fertilizer at the time of planting. We recommend continued fertilization services for future growth.',
+      "• Stump Grinding — If you'd like the entire tree removed, including the stump, we can accommodate that! Generally, stumps are ground 6-8 inches below the surrounding landscape grade.",
+      "• Plant Health Care — It's important to take an integrated approach to plant health care, which includes proper pruning and maintenance, proper fertilization, and, if necessary, insect and disease control. We use treatments that are scientifically proven to target the pests impacting your landscape while minimizing the impact on beneficial insects.",
+      '• Deep Root Feedings — This helps maintain established trees, as well as provide high-quality nutrition to newly planted trees. The healthier the soil, the healthier the tree!',
+      '• Emerald Ash Borer Treatments — Our arborists will evaluate your ash trees to determine if Emerald Ash Borer (EAB) is present. Not every tree is a good candidate for treatment, so we will advise you on a case-by-case basis. Treatments for EAB must be done annually or every other year, depending on the treatment performed.',
+      "• Emergency Services — There's never a good time for a tree to fail, but it happens. Sometimes it's due to heavy snow, strong winds, disease, or age. These can be a safety risk to you and your property, especially if the tree is near power lines or your home. We'll come by and remedy the situation in a prompt and professional fashion.",
+    ],
+  },
+  {
+    question: 'What are your service areas?',
+    answer: [
+      "The Ottawa Valley, including Pembroke, Petawawa, Deep River, Mattawa, Fort Coulonge, Shawville, Renfrew, Quyon, Arnprior, Ottawa, Rockland, L'Orignal, Hawkesbury, Rigaud, Almonte, Round Lake Centre, Dacre, Douglas, Hyndford, Scotch Bush, Osceola, and Barr Line.",
+    ],
+  },
+  {
+    question: 'What is the best time of year to prune a tree?',
+    answer: [
+      "During the late winter or early spring, typically before new growth begins. During this dormant season, trees are less susceptible to stress, and it allows for better wound closure as they heal quickly in the spring. Additionally, with no leaves in the way, it's easier to see the tree's structure and make precise cuts.",
+      "Flowering trees may have different pruning schedules to avoid cutting off next year's buds. We always consider the specific needs of each tree species.",
+    ],
+  },
+  {
+    question: 'Which payment methods do you accept?',
+    answer: ['We accept payment by cash, cheque, or e-transfer.'],
+  },
+  {
+    question: 'What time does the crew start working?',
+    answer: ['Typically around 8:00 a.m., although we are flexible.'],
+  },
+  {
+    question: 'Do I need to be present for the estimate?',
+    answer: [
+      "You do not need to be present. Our arborists will ring the doorbell upon arrival. If you can't or won't be home, just let us know and we'll walk the property to perform the estimate. Please ensure that we have access to the area (backyard, etc.), and that any pets are secured indoors.",
+    ],
+  },
+  {
+    question: 'Do I need to be present for my scheduled service?',
+    answer: [
+      'You do not need to be present. Our crew will have a detailed work order to set them up for success.',
+    ],
+  },
+  {
+    question: 'What if I need to cancel or reschedule?',
+    answer: [
+      "No worries, just try to reach out to us 24 hours before the work is scheduled. If there's inclement weather or unforeseen circumstances preventing your job's date, we'll be in touch to reschedule.",
+    ],
+  },
+  {
+    question: 'My cat is stuck in a tree! Can you help?',
+    answer: ["We're happy to help; reach out to us."],
+  },
+  {
+    question: 'What are the benefits of hiring a professional arborist?',
+    answer: [
+      'Hiring a professional arborist ensures your trees receive expert care and maintenance, promoting their health, safety, and longevity. Arborists are trained to diagnose tree diseases, safely remove hazardous branches, and perform proper pruning techniques that encourage healthy growth. They also help prevent potential property damage from weak or overgrown trees. A professional arborist can provide tailored advice and services to keep your trees healthy and beautiful while ensuring safety and environmental sustainability.',
+    ],
+  },
+];
+
 const privacy = [
   {
     title: 'privacy policy',
@@ -340,6 +431,7 @@ export {
   services,
   testimonials,
   contactLinks,
+  faq,
   privacy,
   tos,
   policyLinks,
