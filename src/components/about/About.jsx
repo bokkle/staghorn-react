@@ -20,7 +20,7 @@ const About = () => {
         <Fade fraction={0.1} triggerOnce>
           <Heading heading="experience" subheading="Why choose us?" />
           <p className="mt-2 max-w-3xl text-zinc-300 lg:text-lg xl:text-2xl">
-            Staghorn Tree Services is a dedicated team of highly trained,
+            Staghorn Tree Service is a dedicated team of highly trained,
             professional arborists. Proudly servicing the{' '}
             {serviceAreas.map((area, i) => (
               <span key={area}>

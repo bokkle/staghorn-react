@@ -1,8 +1,17 @@
+import woodgrain from '../../assets/woodgrain-pattern.svg';
+
 const ServicesCard = ({ index, title, info, image, alt }) => {
   return (
     <div
-      className={`flex flex-col-reverse ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} group`}
+      className={`flex flex-col-reverse ${index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'} group relative overflow-hidden`}
     >
+      {index % 2 === 0 && (
+        <img
+          src={woodgrain}
+          className="absolute z-[-1] h-full w-full object-cover opacity-5"
+          alt=""
+        />
+      )}
       <div className="flex flex-col items-center justify-center p-8 md:w-1/2">
         <h4
           className={`text-2xl font-semibold capitalize text-zinc-100 text-opacity-100 transition-colors duration-500 ease-out will-change-auto group-hover:text-emerald-600 md:text-3xl lg:text-5xl`}
