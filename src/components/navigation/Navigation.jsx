@@ -4,6 +4,7 @@ import { HiMenuAlt1 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 
 import Nav from './Nav';
+import GradientDivider from '../../ui/GradientDivider';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,6 +58,7 @@ const Navigation = () => {
           ))}
         </ul>
       </nav>
+      <GradientDivider />
     </header>
   );
 };
