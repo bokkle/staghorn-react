@@ -54,7 +54,7 @@ const aboutUs = [
   {
     title: 'Highly trained',
     description:
-      "We've completed formal education on Arborism, staying up-to-date with the latest advancements in tree care",
+      "We've completed formal education on Arboriculture, staying up-to-date with the latest advancements in tree care",
     icon: PiGraduationCapThin,
   },
   {
@@ -148,7 +148,7 @@ const testimonials = [
     name: 'Jessica C.',
     location: 'Arnprior, ON',
     quote: [
-      'I felt claustrophobic in my backyard, everything was so overgrown. You turned it into a sanctuary. I am very happy that I found out about you.',
+      'I felt claustrophobic in my backyard, everything was so overgrown. You turned it into a sanctuary. I am super happy that I found out about you.',
     ],
     numStars: 5,
     img: darlene,

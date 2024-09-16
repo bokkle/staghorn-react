@@ -13,7 +13,11 @@ const ContactImg = () => {
           triggerOnce
           className="flex h-full w-full items-center justify-center"
         >
-          <img src={logo} className="w-full" alt="staghorn tree service logo" />
+          <img
+            src={logo}
+            className="pointer-events-none w-full select-none"
+            alt="staghorn tree service company logo"
+          />
         </Slide>
       </ScrollParallax>
       <Fireflies />

@@ -5,9 +5,9 @@ import FooterLogo from './FooterLogo';
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-900 px-4 py-16 md:px-6 lg:px-8">
+    <footer className="bg-stone-900 px-4 py-16 md:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col">
-        <span className="mb-10 select-none text-left text-3xl font-bold uppercase text-zinc-50 lg:text-center">
+        <span className="mb-10 select-none text-left text-3xl font-bold uppercase text-stone-50 lg:text-center">
           staghorn
         </span>
         <div className="flex flex-col justify-between md:flex-row md:pb-6">

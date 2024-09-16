@@ -1,9 +1,10 @@
 import { RiFacebookBoxLine, RiInstagramLine } from 'react-icons/ri';
+import { IoLocationOutline } from 'react-icons/io5';
 
 const FooterConnect = () => {
   return (
-    <div className="flex flex-col gap-3 border-b border-zinc-700 pb-4 md:border-none">
-      <h4 className="select-none text-xl font-semibold capitalize text-zinc-50">
+    <div className="flex flex-col gap-3 border-b border-stone-700 pb-4 md:border-none">
+      <h4 className="select-none text-xl font-semibold capitalize text-stone-50">
         connect
       </h4>
       <div className="flex gap-3">
@@ -11,19 +12,23 @@ const FooterConnect = () => {
           href="https://www.facebook.com/people/Staghorn-Tree-Service/100095581361451/"
           target="_blank"
         >
-          <RiFacebookBoxLine className="text-4xl text-zinc-300 transition-colors duration-300 ease-out hover:text-[#1877f2]" />
+          <RiFacebookBoxLine className="text-4xl text-stone-300 transition-colors duration-300 ease-out hover:text-[#1877f2]" />
         </a>
         <a
           href="https://www.instagram.com/staghorn_treeservice/"
           target="_blank"
         >
-          <RiInstagramLine className="text-4xl text-zinc-300 transition-colors duration-300 ease-out hover:text-[#c13584]" />
+          <RiInstagramLine className="text-4xl text-stone-300 transition-colors duration-300 ease-out hover:text-[#c13584]" />
         </a>
       </div>
-      <p className="text-zinc-300 md:text-lg">416-270-6681</p>
-      <p className="text-zinc-300 md:text-lg">
+      <p className="text-stone-300 md:text-lg">416-270-6681</p>
+      <p className="text-stone-300 md:text-lg">
         staghorn.treeservices@gmail.com
       </p>
+      <div className="flex items-center gap-1">
+        <p className="text-stone-300 md:text-lg">Pembroke, Ontario</p>
+        <IoLocationOutline className="text-lg text-stone-300 md:text-xl" />
+      </div>
     </div>
   );
 };

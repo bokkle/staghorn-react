@@ -31,7 +31,7 @@ const GradientDivider = () => {
   return (
     <div
       ref={dividerRef}
-      className="linear max-w-screen absolute mx-auto h-1 w-full bg-white opacity-60 backdrop-blur-sm transition-all duration-75"
+      className="linear max-w-screen absolute mx-auto mt-[-1px] h-1 w-full bg-white opacity-60 backdrop-blur-sm transition-all"
       style={{
         background: `linear-gradient(90deg, #059669, #34D399)`,
         backgroundSize: `${gradientWidth} 100%`,

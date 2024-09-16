@@ -11,10 +11,10 @@ const DesktopNavLink = ({ link, title }) => {
       onMouseLeave={() => setHovered(false)}
     >
       <li
-        className="text-xl capitalize hover:text-emerald-400"
+        className="text-xl capitalize transition-all duration-150 ease-out hover:text-emerald-400"
         style={{
           textShadow:
-            hovered && '0 0 1px rgb(52, 211, 153), 0 0 2px rgb(52, 211, 153)',
+            hovered && '0 0 2px rgb(52, 211, 153), 0 0 10px rgb(52, 211, 153)',
         }}
       >
         {title}

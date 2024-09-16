@@ -16,10 +16,8 @@ const Reviews = () => {
         alt=""
       />
       <div className="mx-auto w-full max-w-screen-xl">
-        <Fade fraction={0.1} cascade triggerOnce>
+        <Fade fraction={0.1} duration={2000} triggerOnce>
           <Heading heading="Reviews" subheading="What do others say?" />
-        </Fade>
-        <Fade fraction={0.05} triggerOnce>
           <div className="mt-6 grid h-full w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
             {testimonials.map((review, i) => (
               <ReviewsCard

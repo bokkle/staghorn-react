@@ -8,7 +8,7 @@ const PrivacyCard = ({ title, index, arr, description }) => {
         {title}
       </h2>
       {description.map((para, i) => (
-        <p key={i} className="text-zinc-50">
+        <p key={i} className="text-stone-50">
           {para}
         </p>
       ))}

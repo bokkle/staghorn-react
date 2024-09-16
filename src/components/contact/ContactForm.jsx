@@ -62,11 +62,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="rounded-xl border border-zinc-700 bg-zinc-900 p-4 md:p-6 lg:p-10">
-      <h4 className="text-xl font-semibold text-zinc-200 md:text-2xl">
+    <div className="rounded-xl border border-stone-700 bg-stone-900 p-4 md:p-6 lg:p-10">
+      <h4 className="text-xl font-semibold text-stone-200 md:text-2xl">
         Let&apos;s have a chat!
       </h4>
-      <p className="text-zinc-300 md:text-lg">
+      <p className="text-stone-300 md:text-lg">
         We&apos;re currently available for booking.
       </p>
       <form
@@ -76,7 +76,7 @@ const ContactForm = () => {
         <div className="flex flex-col">
           <label
             htmlFor="user_name"
-            className="text-sm font-semibold capitalize text-zinc-50 md:text-base"
+            className="text-sm font-semibold capitalize text-stone-50 md:text-base"
           >
             name:
           </label>
@@ -87,14 +87,14 @@ const ContactForm = () => {
             value={formData.user_name}
             placeholder="Enter your name"
             onChange={handleChange}
-            className="mt-1 rounded-md border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
+            className="mt-1 rounded-md border-b-[3px] border-stone-400 bg-stone-800 bg-white/0 p-2 text-stone-100 focus:border-emerald-400 focus:outline-none"
             required
           />
         </div>
         <div className="flex flex-col">
           <label
             htmlFor="user_email"
-            className="text-sm font-semibold capitalize text-zinc-50 md:text-base"
+            className="text-sm font-semibold capitalize text-stone-50 md:text-base"
           >
             email:
           </label>
@@ -105,14 +105,14 @@ const ContactForm = () => {
             value={formData.user_email}
             placeholder="Enter your email"
             onChange={handleChange}
-            className="mt-1 rounded-md border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
+            className="mt-1 rounded-md border-b-[3px] border-stone-400 bg-stone-800 bg-white/0 p-2 text-stone-100 focus:border-emerald-400 focus:outline-none"
             required
           />
         </div>
         <div className="flex flex-col">
           <label
             htmlFor="message"
-            className="text-sm font-semibold capitalize text-zinc-50 md:text-base"
+            className="text-sm font-semibold capitalize text-stone-50 md:text-base"
           >
             message:
           </label>
@@ -124,13 +124,13 @@ const ContactForm = () => {
             value={formData.message}
             placeholder="Let us know how we can help"
             onChange={handleChange}
-            className="mt-1 resize-none rounded-md border-b-[3px] border-zinc-400 bg-white/0 bg-zinc-800 p-2 text-zinc-100 focus:border-emerald-400 focus:outline-none"
+            className="mt-1 resize-none rounded-md border-b-[3px] border-stone-400 bg-stone-800 bg-white/0 p-2 text-stone-100 focus:border-emerald-400 focus:outline-none"
             required
           />
         </div>
         <button
           type="submit"
-          className="mx-auto mt-4 w-full max-w-[300px] select-none bg-emerald-600 p-3 font-sans font-bold uppercase text-zinc-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-700 hover:ring-emerald-700 active:scale-95 md:text-xl"
+          className="mx-auto mt-4 w-full max-w-[300px] select-none bg-emerald-600 p-3 font-sans font-bold uppercase text-stone-100 ring ring-emerald-600 transition-all duration-300 ease-out hover:bg-emerald-700 hover:ring-emerald-700 active:scale-95 md:text-xl"
           style={{ textShadow: '0 0 3px black' }}
         >
           {isLoading ? (

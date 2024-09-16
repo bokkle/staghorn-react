@@ -6,8 +6,8 @@ const FooterLinks = () => {
   return (
     <div className="my-6 grid select-none grid-cols-2 md:my-0">
       <div>
-        <h2 className="text-xl font-semibold capitalize text-zinc-50">
-          sitemap
+        <h2 className="text-xl font-semibold capitalize text-stone-50">
+          navigate
         </h2>
         <ul>
           {navItems.map((link, i) => (
@@ -16,7 +16,7 @@ const FooterLinks = () => {
         </ul>
       </div>
       <div>
-        <h2 className="text-xl font-semibold capitalize text-zinc-50">
+        <h2 className="text-xl font-semibold capitalize text-stone-50">
           policies
         </h2>
         <ul>

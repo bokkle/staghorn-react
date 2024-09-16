@@ -7,9 +7,9 @@ const Contact = () => {
   return (
     <section id="contact" className="px-4 py-16 md:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto w-full max-w-screen-xl">
-        <Fade fraction={0.1} cascade triggerOnce>
+        <Fade fraction={0.1} triggerOnce>
           <Heading heading="Contact" subheading="Need an arborist?" />
-          <p className="mt-2 max-w-3xl text-zinc-300 lg:text-lg xl:text-2xl">
+          <p className="mt-2 max-w-3xl text-stone-300 lg:text-lg xl:text-2xl">
             Get in touch with us for expert tree care in the{' '}
             <strong className="font-semibold capitalize text-emerald-400">
               ottawa valley
