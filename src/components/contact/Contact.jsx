@@ -15,7 +15,7 @@ const Contact = () => {
               ottawa valley
             </strong>
             . You can email us through the contact form below, or select another
-            contact method. We&apos;re currently offering{' '}
+            method to reach out. We&apos;re currently offering{' '}
             <em className="text-emerald-400">free estimates</em>.
           </p>
         </Fade>

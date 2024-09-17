@@ -47,7 +47,7 @@ const serviceAreas = [
   'pembroke',
   'petawawa',
   'deep river',
-  'arnprior',
+  'Renfrew County',
 ];
 
 const aboutUs = [
@@ -159,12 +159,12 @@ const contactLinks = [
   {
     title: 'Text us',
     icon: MdOutlineSms,
-    link: 'sms:+4162706681?body=Hey Staghorn, ',
+    link: 'sms:416-270-6681?body=Hey Staghorn, ',
   },
   {
     title: 'Call us',
     icon: LuPhone,
-    link: 'tel:+4162706681',
+    link: 'tel:416-270-6681',
   },
   {
     title: 'Email us',
@@ -182,10 +182,9 @@ const faq = [
     ],
   },
   {
-    question: 'What is an ISA Certified Arborist?',
+    question: 'What is a Certified Arborist?',
     answer: [
-      'At Staghorn, we are ISA Certified Arborists. We have successfully completed formal education (specifically, at Algonquin College) in Arboriculture.',
-      'To earn the ISA credential, an Arborist must be trained and knowledgeable in all aspects of arboriculture. This strengthens our credibility and reliability in the field so we can properly serve your needs.',
+      'At Staghorn, we pride ourselves on being Certified Arborists, having completed formal education in Arboriculture at Algonquin College. This credential signifies that we are thoroughly trained and knowledgeable in all areas of arboriculture, enhancing our expertise and credibility. With this certification, we are well-equipped to address your specific tree care needs with the highest level of professionalism.',
     ],
   },
   {
@@ -238,7 +237,7 @@ const faq = [
   {
     question: 'Do I need to be present for the estimate?',
     answer: [
-      "You do not need to be present. Our arborists will ring the doorbell upon arrival. If you can't or won't be home, just let us know and we'll walk the property to perform the estimate. Please ensure that we have access to the area (backyard, etc.), and that any pets are secured indoors.",
+      'We would prefer that you are present for the estimate. This way, we can ensure that we gather all of the necessary information needed to complete our job swiftly and efficiently.',
     ],
   },
   {
@@ -254,7 +253,7 @@ const faq = [
     ],
   },
   {
-    question: 'My cat is stuck in a tree! Can you help?',
+    question: 'My cat (or drone) is stuck in a tree! Can you help?',
     answer: ["We're happy to help; reach out to us."],
   },
   {

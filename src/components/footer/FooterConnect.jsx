@@ -26,8 +26,8 @@ const FooterConnect = () => {
         staghorn.treeservices@gmail.com
       </p>
       <div className="flex items-center gap-1">
-        <p className="text-stone-300 md:text-lg">Pembroke, Ontario</p>
         <IoLocationOutline className="text-lg text-stone-300 md:text-xl" />
+        <p className="text-stone-300 md:text-lg">Pembroke, Ontario</p>
       </div>
     </div>
   );
